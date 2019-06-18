@@ -30,10 +30,8 @@ public class PlayerController : MonoBehaviour {
     [Header("Spring settings:")]
     //[SerializeField]
     //private JointDriveMode jointMode = JointDriveMode.Position;
-    [SerializeField]
-    private float jointSpring = 20f;
-    [SerializeField]
-    private float jointMaxForce = 40f;
+    public float jointSpring = 20f;
+    public float jointMaxForce = 40f;
 
     private PlayerMotor motor;
     private ConfigurableJoint joint;
