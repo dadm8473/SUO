@@ -9,7 +9,7 @@ public class rotateCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        updtaeRotate += 20 * Time.deltaTime;
+        updtaeRotate += 10 * Time.deltaTime;
 
         transform.rotation = Quaternion.Euler(0, updtaeRotate, 0);
     }
