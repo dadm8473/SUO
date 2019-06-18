@@ -72,6 +72,7 @@ public class PlayerShoot : NetworkBehaviour
     void RpcDoShootEffect()
     {
         weaponManager.GetCurrentGraphics().muzzleFlash.Play();
+        weaponManager.GetCurrentGraphics().shotAudio.PlayOneShot(weaponManager.GetCurrentGraphics().shotClip);
     }
 
     [Command]

@@ -45,6 +45,9 @@ public class Player : NetworkBehaviour {
 
     private bool firstSetup = true;
 
+    public AudioSource hitAudio;
+    public AudioClip hitClip;
+
     //void Update()
     //{
     //    if (!isLocalPlayer)
@@ -101,6 +104,7 @@ public class Player : NetworkBehaviour {
             return;
 
         currentHealth -= _amount;
+        hitAudio.PlayOneShot(hitClip);
 
         Debug.Log(transform.name + " 의 체력은 " + currentHealth + " 남았습니다.");
 
