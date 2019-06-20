@@ -48,6 +48,10 @@ public class PlayerShoot : NetworkBehaviour
             {
                 Shoot();
             }
+            else if (Input.GetButtonUp("Fire1"))
+            {
+                CancelInvoke("Shoot");
+            }
         }
         else
         {
